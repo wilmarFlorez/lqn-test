@@ -6,6 +6,7 @@ import {
 import { CONFIG_APOLLO_URL } from "./variables";
 
 let apolloInstance: ApolloClient<NormalizedCacheObject> | null = null;
+
 export const Apollo = (): ApolloClient<NormalizedCacheObject> => {
   if (apolloInstance === null) {
     apolloInstance = new ApolloClient({

@@ -37,6 +37,7 @@ export const getPeopleAPI = async ({
       data: {
         pageInfo: {
           endCursor: response.data.allPeople.pageInfo.endCursor as string,
+          // Mala practica de asumir la integridad de los objetos pero conozco que son typeguards
           startCursor: response.data.allPeople?.pageInfo.startCursor! as string,
         },
 
